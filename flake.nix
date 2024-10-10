@@ -46,7 +46,7 @@
             printf "\
             function idris2terminal()
               vim.cmd('split')
-              vim.cmd('terminal nix-shell -p rlwrap -p idris2 --run \"rlwrap --ansi-colour-aware --no-children idris2\"')
+              vim.cmd('terminal nix-shell -p rlwrap -p idris2 --run \"rlwrap --ansi-colour-aware --no-children idris2 --find-ipkg\"')
             end
             vim.api.nvim_set_keymap('n', '<F2>', '<CMD>lua require(\"idris2terminal\")()<CR>',
               { noremap = true, silent = false }
