@@ -58,7 +58,8 @@
       in
       {
         packages.default = pkgs.writeShellScriptBin "nvim-configured" ''
-          ${pkgs.neovim}/bin/nvim --cmd "set runtimepath+=${config}" -u ${config}/init.vim "$@"
+          export PATH=$PATH:${pkgs.idris2}/bin
+          exec ${pkgs.neovim}/bin/nvim --cmd "set runtimepath+=${config}" -u ${config}/init.vim "$@"
         '';
       }
     );
