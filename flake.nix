@@ -37,7 +37,6 @@
             Plug '${idris2-vim}'
             call plug#end()
             lua require('idris2terminal')
-            colorscheme lunaperche
             syntax enable
             filetype plugin indent on
             " > $out/init.vim
